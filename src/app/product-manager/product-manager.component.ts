@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from './Product';
-import { data } from './Mockproduct';
+import { data } from '../MockProduct';
+import { Product } from '../Product';
 import { ProductService } from '../product.service';
 
-
 @Component({
-  selector: 'app-list-product',
-  templateUrl: './list-product.component.html',
-  styleUrls: ['./list-product.component.css']
+  selector: 'app-product-manager',
+  templateUrl: './product-manager.component.html',
+  styleUrls: ['./product-manager.component.css']
 })
-export class ListProductComponent implements OnInit {
+export class ProductManagerComponent implements OnInit {
 
   constructor(
     private productsService: ProductService
@@ -23,7 +22,13 @@ export class ListProductComponent implements OnInit {
   products: Product[];
 
   removeProduct(id){
-    return this.products = this.productsService.removeProduct(id);
+    let i=0;
+    this.products.map(x=>{
+      if(x.id === id){
+        this.products.splice(i,1);
+      }
+      i++;
+    })
   }
 
   getProduct(){

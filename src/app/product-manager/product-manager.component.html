@@ -1,0 +1,21 @@
+<h3>MANAGE PRODUCTS</h3>
+  <table class="table">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let product of products">
+      <th>{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td>{{product.price}}</td>
+      <td>{{product.desc}}</td>
+      <div class="btn btn-danger m-3" (click)="removeProduct(product.id)">Delete</div>
+      <div class="btn btn-success m-3" (click)="Detail(product)">Detail</div>
+    </tr>
+    <div *ngIf="selected">
+      <app-product [data]="selected"></app-product>
+    </div>
+  </table>

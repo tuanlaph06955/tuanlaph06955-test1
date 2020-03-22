@@ -3,21 +3,29 @@
 
 <div class="container">
 
+<!-- <app-product-manager></app-product-manager> -->
+
+<a routerLink="/product-add">ADD PRODUCT</a> &nbsp;&nbsp;&nbsp;
+<a routerLink="/product-manager">MANAGER PRODUCT</a>
+
+
+
   <div class="row">
     <div class="col-lg-3">
       <app-category></app-category>
-
     </div>
     <div class="col-lg-9">
       <app-banner></app-banner>
-      <app-list-product></app-list-product>
+      <router-outlet></router-outlet>
+      <a routerLink="/list-product">SHOW PRODUCT</a>
+
+      <!-- <app-list-product></app-list-product> -->
     </div>
-    
+
   </div>
-  
+
 
 </div>
-
 </body>
 
 <app-footer></app-footer>
