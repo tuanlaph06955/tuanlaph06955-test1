@@ -14,8 +14,10 @@
       <td>{{product.desc}}</td>
       <div class="btn btn-danger m-3" (click)="removeProduct(product.id)">Delete</div>
       <div class="btn btn-success m-3" (click)="Detail(product)">Detail</div>
+      <div class="btn btn-success" [routerLink]="['/product-manager', product.id, 'edit']" (click)="Update(product.id)">Update</div>
     </tr>
     <div *ngIf="selected">
       <app-product [data]="selected"></app-product>
     </div>
   </table>
+  

@@ -12,6 +12,17 @@ export class ProductService {
   getProduct(){
     return this.products;
   }
+
+  getProductByID(id: number){
+    let result = null;
+    for(var i=0; i<this.products.length; i++){
+      if(this.products[i].id == id){
+        result = this.products[i];
+        break;
+      }
+    }
+    return result;
+  }
   removeProduct(id){
     return this.products = this.products.filter(product => product.id != id);
   }
@@ -24,5 +35,9 @@ export class ProductService {
     let fakeObj = {id: 11, ...product};
     this.products.push(fakeObj);
     console.log(this.products);
+  }
+
+  updateProduct(product :  Product){
+    
   }
 }

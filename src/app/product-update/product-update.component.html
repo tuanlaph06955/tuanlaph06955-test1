@@ -1,0 +1,26 @@
+<h3>UPDATE PRODUCT</h3>
+<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Name</label>
+    <input type="text" class="form-control" name="name" [(ngModel)]="product.name">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Price</label>
+    <input type="number" class="form-control" name="price" [(ngModel)]="product.price">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">IMG</label>
+    <input type="text" class="form-control" name="image" [(ngModel)]="product.image">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">DESC</label>
+    <input type="text" class="form-control" name="desc" [(ngModel)]="product.desc">
+  </div>
+
+  <button type="submit" class="btn btn-primary" (click)="updateProduct()">Save</button>
+</form>
+
+

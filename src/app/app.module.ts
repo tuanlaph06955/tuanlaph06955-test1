@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HelloComponent } from './hello.component';
@@ -19,10 +20,11 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { HomepageComponent } from './homepage/homepage.component';
+import { ProductUpdateComponent } from './product-update/product-update.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouting ],
-  declarations: [ AppComponent, HelloComponent, MenuComponent, CategoryComponent, BannerComponent, FooterComponent, ListProductComponent, ProductComponent, ProductManagerComponent, ProductAddComponent, AboutComponent, ServiceComponent, HomepageComponent ],
+  declarations: [ AppComponent, HelloComponent, MenuComponent, CategoryComponent, BannerComponent, FooterComponent, ListProductComponent, ProductComponent, ProductManagerComponent, ProductAddComponent, AboutComponent, ServiceComponent, HomepageComponent, ProductUpdateComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })
