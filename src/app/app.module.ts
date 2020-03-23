@@ -21,10 +21,11 @@ import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouting ],
-  declarations: [ AppComponent, HelloComponent, MenuComponent, CategoryComponent, BannerComponent, FooterComponent, ListProductComponent, ProductComponent, ProductManagerComponent, ProductAddComponent, AboutComponent, ServiceComponent, HomepageComponent, ProductUpdateComponent ],
+  declarations: [ AppComponent, HelloComponent, MenuComponent, CategoryComponent, BannerComponent, FooterComponent, ListProductComponent, ProductComponent, ProductManagerComponent, ProductAddComponent, AboutComponent, ServiceComponent, HomepageComponent, ProductUpdateComponent, ProductDetailComponent ],
   bootstrap:    [ AppComponent ],
   providers: [ProductService]
 })

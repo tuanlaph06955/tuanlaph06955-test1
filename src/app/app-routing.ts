@@ -7,6 +7,7 @@ import { AboutComponent } from './about/about.component';
 import { ServiceComponent } from './service/service.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductUpdateComponent } from './product-update/product-update.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 const routes: Routes = [
   { path: 'product-add', component:ProductAddComponent  },
@@ -15,9 +16,8 @@ const routes: Routes = [
   { path: 'about', component:AboutComponent  },
   { path: 'service', component:ServiceComponent  },
   { path: 'homepage', component:HomepageComponent  },
-  // { path: 'product-manager/id/edit', component: ProductUpdateComponent },
-
   { path: 'product-manager/:id/edit', component: ProductUpdateComponent },
+  { path: 'product-manager/:id', component: ProductDetailComponent},
 
   
 ];
