@@ -30,7 +30,9 @@ export class ProductService {
     console.log(this.products);
   }
 
-  updateProduct(product :  Product){
-    
+  editProductByID(data: Product) {
+    return this.products = this.products.map(product => {
+      return product.id === data.id ? data : product;
+    });
   }
 }
