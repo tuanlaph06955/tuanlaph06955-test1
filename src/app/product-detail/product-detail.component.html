@@ -8,8 +8,8 @@
   <tr>
     <td>{{ product.name }}</td>
     <td><img width="400px" src="{{ product.image }}" alt=""></td>
-    <td>{{ product.price }}</td>
+    <td>{{ product.price | currency:'VND' : true }}</td>
     <td>{{ product.desc }}</td>
   </tr>
-  <button class="btn btn-success btn-" routerLink="/product-manager">Back To List</button>
+  <button class="btn btn-success btn-xs" routerLink="/product-manager">Back To List</button>
 </table>

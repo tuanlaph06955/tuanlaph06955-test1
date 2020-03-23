@@ -14,14 +14,7 @@ export class ProductService {
   }
 
   getProductByID(id: number){
-    let result = null;
-    for(var i=0; i<this.products.length; i++){
-      if(this.products[i].id == id){
-        result = this.products[i];
-        break;
-      }
-    }
-    return result;
+    return this.products.find(product => product.id == id);
   }
   removeProduct(id){
     return this.products = this.products.filter(product => product.id != id);
