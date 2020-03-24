@@ -25,8 +25,10 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule, AppRouting ],
+
   declarations: [ AppComponent, HelloComponent, MenuComponent, CategoryComponent, BannerComponent, FooterComponent, ListProductComponent, ProductComponent, ProductManagerComponent, ProductAddComponent, AboutComponent, ServiceComponent, HomepageComponent, ProductUpdateComponent, ProductDetailComponent ],
   bootstrap:    [ AppComponent ],
+  
   providers: [ProductService]
 })
 export class AppModule { }
